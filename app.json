@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/freight/freight",
+    "pages/shop/shop",
+    "pages/person/person",
+    "pages/logs/logs",
+    "pages/index/driver/driver",
+    "pages/index/driver/findPassenger/findpassenger",
+    "pages/index/findDriver/finddriver"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "速安",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "拼车"
+      },
+      {
+        "pagePath": "pages/freight/freight",
+        "text": "货运"
+      },
+      {
+        "pagePath": "pages/shop/shop",
+        "text": "商城"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "个人中心"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

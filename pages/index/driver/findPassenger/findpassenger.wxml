@@ -1,0 +1,19 @@
+<!--pages/taxi/driver/findPassenger/findpassenger.wxml-->
+<view class="container ">
+  <view class="passenger-list">
+    <view class="passenger-list-item" wx:for="{{passengerList}}">
+
+      <view class="passenger-time">{{item.time}}</view>
+      <view class="passenger-info">
+        <view class="passenger-info-item">
+          <view class="passenger-info-location start">{{item.startLocation}}</view>
+        </view>
+        <view class="passenger-info-item">
+          <view class="passenger-info-location">{{item.endLocation}}</view>
+          <view class="passenger-info-number">{{item.number}}人</view>
+        </view>
+      </view>
+      <view class="passenger-order">接单</view>
+    </view>
+  </view>
+</view>
