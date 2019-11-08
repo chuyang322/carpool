@@ -1,2 +1,40 @@
 <!--pages/freight/freight.wxml-->
-<text>pages/freight/freight.wxml</text>
+<view class="container">
+  <view class="switch-tab">
+    <view class="switch-tab-goods {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchTopTab">货物</view>
+    <view class="switch-tab-truck {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="switchTopTab">货车</view>
+    <image class="fqdd" src="/image/freight/fqdd.png"></image>
+  </view>
+  <swiper current="{{currentTab}}" class="swiper">
+    <swiper-item>
+      <view class="list">
+        <view class="list-item" wx:for="{{goodsList}}">
+          <view class="item-info">
+            <view class="info-top">
+              <view class="info-type">{{item.type}}</view>
+              <view class="info-date">{{item.date}}</view>
+            </view>
+            <view class="goods-weight">货物重量：{{item.weight}}</view>
+            <view class="goods-route">{{item.startPosition}}-->{{item.endPosition}}</view>
+          </view>
+          <image class="info-more" src="../../image/freight/more.png"></image>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item>
+      <view class="list">
+        <view class="list-item" wx:for="{{truckList}}">
+          <view class="item-info">
+            <view class="info-top">
+              <view class="info-type"></view>
+              <view class="info-date">{{item.date}}</view>
+            </view>
+            <view class="truck-fanwei">配送范围：{{item.fanwei}}</view>
+            <view class="truck-weight">货车载重：{{item.weight}}</view>
+          </view>
+          <image class="info-more" src="../../image/freight/more.png"></image>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+</view>

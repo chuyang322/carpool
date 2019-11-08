@@ -1,1 +1,116 @@
 /* pages/freight/freight.wxss */
+
+.switch-tab {
+  height: 120rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 20rpx;
+  box-sizing: border-box;
+  background: white;
+  border: 1rpx solid #efefef;
+  border-radius: 15rpx;
+  align-items: center;
+}
+
+.switch-tab-goods {
+  display: inline-block;
+  margin-left: 40rpx;
+  width: 80rpx;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10rpx 20rpx;
+}
+
+.switch-tab-truck {
+  display: inline-block;
+  margin-left: 60rpx;
+  width: 80rpx;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10rpx 20rpx;
+}
+
+.on {
+  background: black;
+  border: 1rpx solid #efefef;
+  border-radius: 15rpx;
+  color: white;
+}
+
+.fqdd{
+  width: 64rpx;
+  height: 64rpx;
+  margin-left: 280rpx;
+}
+
+.swiper {
+  display: block;
+  min-height: 1000rpx;
+  width: 100%;
+}
+
+.item-info {
+  width: 680rpx;
+  height: 100%;
+  border-right: 1rpx solid #efefef;
+  display: flex;
+  flex-direction: column;
+}
+
+.info-top {
+  height: 25%;
+  width: 100%;
+  border-bottom: 1rpx solid #efefef;
+  display: flex;
+  flex-direction: row;
+}
+
+.info-type {
+  height: 100%;
+  width: 50%;
+  text-indent: 20rpx;
+}
+
+.info-date {
+  height: 100%;
+  width: 50%;
+  text-indent: 160rpx;
+}
+
+.goods-weight {
+  height: 40%;
+  width: 100%;
+  text-indent: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.goods-route {
+  height: 40%;
+  width: 100%;
+  text-indent: 20rpx;
+}
+
+.info-more {
+  width: 20rpx;
+  height: 33rpx;
+  margin-top: 60rpx;
+  margin-left: 10rpx;
+}
+
+.truck-fanwei {
+  height: 40%;
+  width: 100%;
+  text-indent: 20rpx;
+  display: flex;
+  align-items: center;
+}
+
+.truck-weight {
+  height: 40%;
+  width: 100%;
+  text-indent: 20rpx;
+}

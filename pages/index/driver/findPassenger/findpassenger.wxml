@@ -1,7 +1,7 @@
 <!--pages/taxi/driver/findPassenger/findpassenger.wxml-->
 <view class="container ">
-  <view class="passenger-list">
-    <view class="passenger-list-item" wx:for="{{passengerList}}">
+  <view class="list">
+    <view class="list-item" wx:for="{{passengerList}}">
 
       <view class="passenger-time">{{item.time}}</view>
       <view class="passenger-info">

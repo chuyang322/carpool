@@ -19,11 +19,15 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "拼车"
+        "text": "拼车",
+        "iconPath": "image/tab/carpool1.png",
+        "selectedIconPath": "image/tab/carpool2.png"
       },
       {
         "pagePath": "pages/freight/freight",
-        "text": "货运"
+        "text": "货运",
+        "iconPath": "image/tab/freight1.png",
+        "selectedIconPath": "image/tab/freight2.png"
       },
       {
         "pagePath": "pages/shop/shop",
@@ -31,7 +35,9 @@
       },
       {
         "pagePath": "pages/person/person",
-        "text": "个人中心"
+        "text": "个人",
+        "iconPath": "image/tab/personal1.png",
+        "selectedIconPath": "image/tab/personal2.png"
       }
     ]
   },

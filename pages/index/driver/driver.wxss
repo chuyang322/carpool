@@ -22,6 +22,7 @@
   background: white;
   align-items: center;
   margin: 10rpx;
+  border-radius: 15rpx;
 }
 
 .wyfd{

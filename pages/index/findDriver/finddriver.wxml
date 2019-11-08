@@ -1,7 +1,7 @@
 <!--pages/index/findDriver/finddriver.wxml-->
 <view class="container ">
-  <view class="car-list">
-    <view class="car-list-item" wx:for="{{carList}}">
+  <view class="list">
+    <view class="list-item" wx:for="{{carList}}">
       <view class="car-info">
         <view class="car-info-top">
           <view class="car-info-time">{{item.time}}</view>

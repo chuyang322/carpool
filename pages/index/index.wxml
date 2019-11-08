@@ -3,7 +3,7 @@
   <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" show-location="true" scale="{{scale}}">
     <button class="to-driverMode" bindtap="toDriverMode">司机</button>
     <cover-view class="cover-view1">
-      <cover-image class="get-location" src="/image/taxi/location.png" bindtap="getPosition"></cover-image>
+      <cover-image class="get-location" src="/image/carpool/location.png" bindtap="getPosition"></cover-image>
       <cover-view class="cover-view2">
         <cover-view class="cover-view2-1" bindtap="findDriver">寻找司机</cover-view>
         <cover-view class="cover-view2-2">我的订单</cover-view>

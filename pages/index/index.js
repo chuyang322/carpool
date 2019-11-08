@@ -6,6 +6,7 @@ Page({
   /**
    * 页面的初始数据
    */
+  showOrderInfo: false,
   data: {
     longitude: 116.40,
     latitude: 39.90,
@@ -39,7 +40,7 @@ Page({
     });
   },
   //选择出发位置
-  chooseDestination: function() {
+  choosePosition: function() {
     var that = this;
     wx.chooseLocation({
       success: function(res) {
@@ -76,7 +77,8 @@ Page({
               id: 1,
               longitude: res.longitude,
               latitude: res.latitude
-            }]
+            }],
+            showOrderInfo:true,
           });
         }
       },
@@ -86,7 +88,7 @@ Page({
       complete: function() {
 
       }
-    })
+    });
   },
   //
   findDriver: function() {

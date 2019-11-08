@@ -5,28 +5,6 @@
   padding-top: 0rpx;
 }
 
-.passenger-list {
-  width: 100%;
-  height: 100%;
-  padding-left: 15rpx;
-  padding-right: 15rpx;
-  box-sizing: border-box;
-  position: absolute;
-}
-
-.passenger-list-item {
-  height: 200rpx;
-  margin-top: 15rpx;
-  background: white;
-  display: flex;
-  flex-direction: row;
-  border-radius: 100rpx 0 0 100rpx;
-  border-top: 1rpx solid #00b358;
-  border-bottom: 1rpx solid #00b358;
-  box-sizing: border-box;
-  align-items: center;
-}
-
 .passenger-time {
   height: 100%;
   width: 200rpx;
