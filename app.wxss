@@ -14,6 +14,7 @@
 
 .border-radius {
   border-radius: 15rpx;
+  border: 1rpx solid #efefef;
 }
 
 .list {

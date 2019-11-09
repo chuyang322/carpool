@@ -1,2 +1,45 @@
 <!--pages/person/person.wxml-->
-<text>pages/person/person.wxml</text>
+<view class="cotainer">
+  <view class="person-info border-radius">
+    <image class="info-head" src="/image/person/head.jpg"></image>
+    <view class="info">
+      <view class="info-name">昵称</view>
+      <view class="info-vip">普通会员</view>
+    </view>
+    <view class="login">登陆</view>
+  </view>
+  <view class="balance">
+    <view class="balance-item">
+      <view class="balance-title">现金</view>
+      <view class="balance-number">100元</view>
+      <view class="balance-operation">提现</view>
+    </view>
+    <view class="balance-item">
+      <view class="balance-title">积分</view>
+      <view class="balance-number">100</view>
+      <view class="balance-operation">兑换</view>
+    </view>
+  </view>
+  <view class="term-list">
+    <view class="term-item">
+      <image class="term-item-image" src="/image/person/wddd.png"></image>
+      <view class="term-item-text">我的订单</view>
+    </view>
+    <view class="term-item">
+      <image class="term-item-image" src="/image/person/yqdjl.png"></image>
+      <view class="term-item-text">邀请的奖励</view>
+    </view>
+    <view class="term-item">
+      <image class="term-item-image" src="/image/person/safe.png"></image>
+      <view class="term-item-text">安全中心</view>
+    </view>
+    <view class="term-item">
+      <image class="term-item-image" src="/image/person/help.png"></image>
+      <view class="term-item-text">帮助</view>
+    </view>
+    <view class="term-item">
+      <image class="term-item-image" src="/image/person/setup.png"></image>
+      <view class="term-item-text">设置</view>
+    </view>
+  </view>
+</view>
