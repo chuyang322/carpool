@@ -9,7 +9,7 @@ Page({
       time: "8:00",
       startLocation: "宜宾",
       endLocation: "成都",
-      number: 5
+      number: 50
     }, {
       time: "10:00",
       startLocation: "宜宾",

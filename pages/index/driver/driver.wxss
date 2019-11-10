@@ -15,24 +15,30 @@
   position: absolute;
   top: 10rpx;
   left: 10rpx;
+  right: 10rpx;
   height: 80rpx;
-  width: 720rpx;
   display: flex;
   flex-direction: row;
-  background: white;
   align-items: center;
-  margin: 10rpx;
-  border-radius: 15rpx;
 }
 
 .wyfd{
   width: 50%;
-  border-right: 1rpx solid #000000;
+  height: 100%;
+  border: 1rpx solid #efefef;
+  border-radius: 15rpx;
   text-align: center;
+  background: white;
+  line-height: 80rpx;
 }
 
 .jqdd{
   width: 50%;
+  height: 100%;
+  border: 1rpx solid #efefef;
+  border-radius: 15rpx;
+  background: white;
+  line-height: 80rpx;
   text-align: center;
 }
 

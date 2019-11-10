@@ -5,67 +5,60 @@
   padding-top: 0rpx;
 }
 
-.passenger-time {
+.passenger-info{
   height: 100%;
-  width: 200rpx;
-  border-radius: 50%;
-  background: white;
-  border: 1rpx solid #00b358;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 70rpx;
-  background: #00b358;
-  color: white;
+  width: 620rpx;
 }
 
-.passenger-info {
-  height: 100%;
-  width: 430rpx;
-  box-sizing: border-box;
-}
-
-.passenger-order {
-  height: 100%;
-  width: 100rpx;
-  background: #00b358;
-  border: 1rpx solid #00b358;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.passenger-info-item {
+.passenger-info-top{
   height: 50%;
+  width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  border-bottom: 1rpx solid #efefef;
 }
 
-.passenger-info-location {
-  width: 70%;
+.passenger-info-time{
+  height: 100%;
+  width: 50%;
+  text-indent: 50rpx;
   display: flex;
+  align-items: center;
 }
 
-.start {
-  align-items: flex-end;
-  border-bottom: 1rpx solid #00b358;
-  border-bottom-style: dashed;
-}
-
-.passenger-info-price {
-  width: 30%;
+.passenger-info-number{
+  height: 100%;
+  width: 50%;
+  text-indent: 220rpx;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+}
+
+.passenger-info-bottom{
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.passenger-info-route{
+  height: 100%;
+  width: 100%;
+  text-indent: 50rpx;
+  display: flex;
+  align-items: center;
+}
+
+.passenger-receipt{
+  height: 100%;
+  width: 100rpx;
+  background: black;
+  border: 1rpx solid #efefef;
+  color: white;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  border-bottom: 1rpx solid orangered;
-  border-bottom-style: dashed;
-  color: orangered;
-}
-
-.passenger-info-number {
-  width: 30%;
-  display: flex;
-  justify-content: center;
+  border-radius: 0 15rpx 15rpx 0;
 }

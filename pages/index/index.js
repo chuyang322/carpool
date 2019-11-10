@@ -1,6 +1,7 @@
 // pages/index/index.js
 const app = getApp();
 var amapFile = require('/libs/amap-wx.js');
+var util = require('../../utils/util.js');
 Page({
 
   /**
@@ -8,6 +9,8 @@ Page({
    */
   showOrderInfo: false,
   data: {
+    date: "",
+    time: "",
     longitude: 116.40,
     latitude: 39.90,
     scale: 16,
@@ -27,7 +30,6 @@ Page({
     var that = this;
     wx.getLocation({
       success: function(res) {
-        console.log(res);
         that.setData({
           longitude: res.longitude,
           latitude: res.latitude,
@@ -44,7 +46,6 @@ Page({
     var that = this;
     wx.chooseLocation({
       success: function(res) {
-        console.log(res);
         if (res.name != "") {
           that.setData({
             location: res.name,
@@ -69,7 +70,6 @@ Page({
     var that = this;
     wx.chooseLocation({
       success: function(res) {
-        console.log(res);
         if (res.name != "") {
           that.setData({
             destination: res.name,
@@ -78,8 +78,9 @@ Page({
               longitude: res.longitude,
               latitude: res.latitude
             }],
-            showOrderInfo:true,
+            showOrderInfo: true,
           });
+          wx.hideTabBar();
         }
       },
       fail: function(info) {
@@ -90,13 +91,36 @@ Page({
       }
     });
   },
+  preventTouchMove: function() {
+
+  },
   //
   findDriver: function() {
     wx.navigateTo({
       url: "./findDriver/finddriver",
     })
   },
-
+  //
+  chooseOrderData:function(e){
+    this.setData({
+      date:e.detail.value,
+    })
+  },
+  //
+  chooseOrderTime: function (e) {
+    this.setData({
+      time: e.detail.value,
+    })
+  },
+  //
+  orderCancel:function(){
+    this.setData({
+      showOrderInfo:false
+    });
+    wx.showTabBar({
+      
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -119,7 +143,6 @@ Page({
     });
     amapFun.getRegeo({
       success: function(data) {
-        console.log(data);
         that.setData({
           location: data[0].name
         })
@@ -128,6 +151,12 @@ Page({
         console.log(info);
       }
     });
+    var data = util.formatTime2(new Date());
+    var time = util.formatTime3(new Date());
+    that.setData({
+      date: data,
+      time: time,
+    })
   },
 
   /**
