@@ -2,21 +2,21 @@
 <view class="map-cotainer">
   <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" show-location="true" scale="{{scale}}">
     <button class="to-driverMode" bindtap="toDriverMode">司机</button>
-    <cover-view class="cover-view1">
+    <view class="view1">
       <cover-image class="get-location" src="/image/carpool/location.png" bindtap="getPosition"></cover-image>
-      <cover-view class="cover-view3">
-        <cover-view class="cover-view3-1" bindtap="findDriver">寻找司机</cover-view>
-        <cover-view class="cover-view3-2">我的订单</cover-view>
-      </cover-view>
-      <cover-view class="cover-view2">
-        <cover-view class="point1"></cover-view>
-        <cover-view class="choose-location" bindtap="choosePosition">{{location}}</cover-view>
-      </cover-view>
-      <cover-view class="cover-view2">
-        <cover-view class="point2"></cover-view>
-        <cover-view class="choose-location" bindtap="chooseDestination">{{destination}}</cover-view>
-      </cover-view>
-    </cover-view>
+      <view class="view3">
+        <view class="view3-1" bindtap="findDriver">寻找司机</view>
+        <view class="view3-2">我的订单</view>
+      </view>
+      <view class="view2">
+        <view class="point1"></view>
+        <view class="choose-location" bindtap="choosePosition">{{location}}</view>
+      </view>
+      <view class="view2">
+        <view class="point2"></view>
+        <view class="choose-location" bindtap="chooseDestination">{{destination}}</view>
+      </view>
+    </view>
   </map>
 </view>
 

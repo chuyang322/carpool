@@ -1,10 +1,12 @@
 // pages/freight/freight.js
+var util = require('../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    showOrderInfo: 0,
     currentTab: 0,
     goodsList: [{
       type: "普通货物",
@@ -39,11 +41,34 @@ Page({
       })
     }
   },
+  //
+  preventTouchMove: function() {},
+  //
+  faqidingdan: function() {
+    var that = this;
+    that.setData({
+      showOrderInfo: 1,
+    });
+    wx.hideTabBar();
+  },
+  //
+  orderCancel: function() {
+    this.setData({
+      showOrderInfo: false
+    });
+    wx.showTabBar();
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    var that = this;
+    var data = util.formatTime2(new Date());
+    var time = util.formatTime3(new Date());
+    that.setData({
+      date: data,
+      time: time,
+    })
   },
 
   /**

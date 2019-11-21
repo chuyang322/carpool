@@ -11,7 +11,7 @@
   height: 100%
 }
 
-.cover-view1{
+.view1{
   position: absolute;
   top: 10rpx;
   left: 10rpx;
@@ -49,3 +49,5 @@
   width: 64rpx;
   height: 64rpx;
 }
+
+

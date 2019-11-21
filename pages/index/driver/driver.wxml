@@ -1,10 +1,41 @@
 <!--pages/taxi/driver/driver.wxml-->
 <view class="map-cotainer">
   <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" show-location="true" scale="{{scale}}">
-    <cover-view class="cover-view1">
-      <cover-view class="wyfd">我要发单</cover-view>
-      <cover-view class="jqdd" bindtap="findPassenger">接取订单</cover-view>
-    </cover-view>
+    <view class="view1">
+      <view class="wyfd" bindtap="issueOrder">我要发单</view>
+      <view class="jqdd" bindtap="findPassenger">接取订单</view>
+    </view>
     <cover-image class="get-location" src="/image/carpool/location.png" bindtap="getPosition"></cover-image>
   </map>
+</view>
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showOrderInfo}}"></view>
+<view class="write-order" wx:if="{{showOrderInfo}}">
+  <view class="order-item">
+    <view class="order-item-title">日期：</view>
+    <picker class="order-item-picker" mode="date" value="{{date}}" start="{{date}}" bindchange="chooseOrderData">
+      <view class="order-item-item">{{date}}</view>
+    </picker>
+  </view>
+  <view class="order-item">
+    <view class="order-item-title">时间：</view>
+    <picker class="order-item-picker" mode="time" value="{{time}}" start="{{time}}" bindchange="chooseOrderTime">
+      <view class="order-item-item">{{time}}</view>
+    </picker>
+  </view>
+  <view class="order-item">
+    <view class="order-item-title">起点：</view>
+    <view class="order-item-item">{{location}}</view>
+  </view>
+  <view class="order-item">
+    <view class="order-item-title">终点：</view>
+    <view class="order-item-item">{{destination}}</view>
+  </view>
+  <view class="order-item">
+    <view class="order-item-title">人数：</view>
+  </view>
+  <view class="order-item">
+    <view class="order-cancel" bindtap="orderCancel">取消</view>
+    <view class="order-confirm">确认</view>
+  </view>
 </view>

@@ -29,13 +29,13 @@
   height: 64rpx;
 }
 
-.cover-view1 {
+.view1 {
   width: 100%;
   position: absolute;
   bottom: 0;
 }
 
-.cover-view2 {
+.view2 {
   width: 730rpx;
   height: 80rpx;
   display: flex;
@@ -46,7 +46,7 @@
   border-radius: 15rpx;
 }
 
-.cover-view3 {
+.view3 {
   width: 730rpx;
   height: 80rpx;
   display: flex;
@@ -54,7 +54,7 @@
   margin: 10rpx;
 }
 
-.cover-view3-1 {
+.view3-1 {
   height: 100%;
   width: 50%;
   border: 1rpx solid #efefef;
@@ -64,7 +64,7 @@
   line-height: 80rpx;
 }
 
-.cover-view3-2 {
+.view3-2 {
   height: 100%;
   width: 50%;
   border: 1rpx solid #efefef;
@@ -96,72 +96,4 @@
   width: 90%;
   display: flex;
   align-items: center;
-}
-
-.write-order {
-  width: 580rpx;
-  height: 750rpx;
-  position: fixed;
-  top: 20%;
-  left: 0;
-  z-index: 9999;
-  margin: 30rpx 85rpx;
-  background-color: #fff;
-  border-radius: 15rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 50rpx;
-}
-
-.order-item{
-  width: 100%;
-  height: 100rpx;
-  border-bottom: 1rpx solid #efefef;
-  display: flex;
-  flex-direction: row;
-  box-sizing: border-box;
-  padding: 0;
-}
-.order-item-title{
-  height: 100%;
-  width: 120rpx;
-  line-height: 140rpx;
-  font-size: 40rpx;
-}
-
-.order-item-item{
-  width: 350rpx;
-  line-height: 140rpx;
-  margin-left: 10rpx;
-  overflow: hidden;
-}
-
-.order-cancel{
-  height: 80rpx;
-  width: 120rpx;
-  border: 1rpx solid #efefef;
-  border-radius: 15rpx;
-  line-height: 80rpx;
-  text-align: center;
-  background: black;
-  color: white;
-  position: relative;
-  left: 50rpx;
-  top: 50rpx;
-}
-
-.order-confirm{
-  height: 80rpx;
-  width: 120rpx;
-  border: 1rpx solid #efefef;
-  border-radius: 15rpx;
-  line-height: 80rpx;
-  text-align: center;
-  background: black;
-  color: white;
-  position: relative;
-  left: 180rpx;
-  top: 50rpx;
 }

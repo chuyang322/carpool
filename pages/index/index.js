@@ -91,6 +91,7 @@ Page({
       }
     });
   },
+  //
   preventTouchMove: function() {
 
   },
@@ -117,9 +118,7 @@ Page({
     this.setData({
       showOrderInfo:false
     });
-    wx.showTabBar({
-      
-    });
+    wx.showTabBar();
   },
   /**
    * 生命周期函数--监听页面加载

@@ -35,6 +35,8 @@ const formatNumber3 = n => {
 }
 module.exports = {
   formatTime: formatTime,
+  //获取日期
   formatTime2: formatTime2,
+  //获取时间
   formatTime3: formatTime3
 }

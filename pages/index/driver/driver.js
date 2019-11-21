@@ -1,12 +1,16 @@
 // pages/taxi/driver/driver.js
 const app = getApp();
 var amapFile = require('../libs/amap-wx.js');
+var util = require('../../../utils/util.js');
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    date: "",
+    time: "",
+    showOrderInfo:false,
     longitude: 116.40,
     latitude: 39.90,
     scale: 16,
@@ -29,13 +33,28 @@ Page({
       }
     });
   },
+  //
+  preventTouchMove: function () {
 
+  },
+  //
   findPassenger:function(){
     wx.navigateTo({
       url: './findPassenger/findpassenger',
     })
   },
-
+  //
+  issueOrder:function(){
+    this.setData({
+      showOrderInfo:true,
+    })
+  },
+  //
+  orderCancel: function () {
+    this.setData({
+      showOrderInfo: false
+    });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -54,6 +73,12 @@ Page({
 
       }
     });
+    var data = util.formatTime2(new Date());
+    var time = util.formatTime3(new Date());
+    that.setData({
+      date: data,
+      time: time,
+    })
   },
 
   /**
