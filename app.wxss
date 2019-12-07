@@ -118,3 +118,8 @@
   left: 180rpx;
   top: 50rpx;
 }
+
+.order-item-input{
+  display: flex;
+  margin-top: 50rpx;
+}

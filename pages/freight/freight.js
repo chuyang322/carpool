@@ -40,6 +40,7 @@ Page({
         currentTab: e.target.dataset.current,
       })
     }
+    console.log(that.data.currentTab);
   },
   //
   preventTouchMove: function() {},
