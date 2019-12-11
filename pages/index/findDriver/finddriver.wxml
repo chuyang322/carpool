@@ -1,18 +1,20 @@
 <!--pages/index/findDriver/finddriver.wxml-->
 <view class="container ">
-  <view class="list">
-    <view class="list-item" wx:for="{{carList}}">
-      <view class="car-info">
-        <view class="car-info-top">
-          <view class="car-info-time">{{item.time}}</view>
-          <view class="car-info-price">{{item.price}}¥</view>
+  <scroll-view class="scroll-list" scroll-y>
+    <view class="list">
+      <view class="list-item" wx:for="{{carList}}">
+        <view class="car-info">
+          <view class="car-info-top">
+            <view class="car-info-time">{{item.time}}</view>
+            <view class="car-info-price">{{item.price}}¥</view>
+          </view>
+          <view class="car-info-bottom">
+            <view class="car-info-rute">{{item.startLocation}}-->{{item.endLocation}}</view>
+            <view class="car-info-number">剩{{item.number}}座</view>
+          </view>
         </view>
-        <view class="car-info-bottom">
-          <view class="car-info-rute">{{item.startLocation}}-->{{item.endLocation}}</view>
-          <view class="car-info-number">剩{{item.number}}座</view>
-        </view>
+        <view class="car-order">预定</view>
       </view>
-      <view class="car-order">预定</view>
     </view>
-  </view>
+  </scroll-view>
 </view>

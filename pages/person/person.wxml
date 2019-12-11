@@ -1,12 +1,11 @@
 <!--pages/person/person.wxml-->
 <view class="cotainer">
   <view class="person-info border-radius">
-    <image class="info-head" src="/image/person/head.jpg"></image>
+    <image class="info-head" src="{{avatarUrl}}"></image>
     <view class="info">
-      <view class="info-name">昵称</view>
+      <view class="info-name">{{userInfo.nickName}}</view>
       <view class="info-vip">普通会员</view>
     </view>
-    <view class="login">登陆</view>
   </view>
   <view class="balance">
     <view class="balance-item">

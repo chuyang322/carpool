@@ -1,10 +1,10 @@
 <!--pages/taxi/driver/driver.wxml-->
 <view class="map-cotainer">
   <map class="map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" show-location="true" scale="{{scale}}">
-    <view class="view1">
-      <view class="wyfd" bindtap="issueOrder">我要发单</view>
-      <view class="jqdd" bindtap="findPassenger">接取订单</view>
-    </view>
+    <cover-view class="cover-view1" wx:if="{{! showOrderInfo}}">
+      <cover-view class="wyfd" bindtap="issueOrder">我要发单</cover-view>
+      <cover-view class="jqdd" bindtap="findPassenger">接取订单</cover-view>
+    </cover-view>
     <cover-image class="get-location" src="/image/carpool/location.png" bindtap="getPosition"></cover-image>
   </map>
 </view>

@@ -31,7 +31,9 @@
       },
       {
         "pagePath": "pages/shop/shop",
-        "text": "商城"
+        "text": "商城",
+        "iconPath": "image/tab/shop1.png",
+        "selectedIconPath": "image/tab/shop2.png"
       },
       {
         "pagePath": "pages/person/person",

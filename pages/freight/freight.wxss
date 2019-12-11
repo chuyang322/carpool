@@ -47,8 +47,9 @@
 }
 
 .swiper {
+  position: relative;
   display: block;
-  min-height: 1000rpx;
+  height: 100%;
   width: 100%;
 }
 

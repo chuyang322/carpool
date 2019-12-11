@@ -7,7 +7,7 @@ Page({
   /**
    * 页面的初始数据
    */
-  showOrderInfo: false,
+  
   data: {
     date: "",
     time: "",
@@ -16,7 +16,16 @@ Page({
     scale: 16,
     location: "在哪上车？",
     destination: "你到哪去？",
-    markers: [{}]
+    markers: [{}],
+    showOrderInfo: false,
+    showModal:true,
+    hasUserInfo:false,
+    userInfo:{},
+  },
+  //
+  getUserInfo:function(e){
+    console.log(e);
+    app.globalData.userInfo=e.userInfo;
   },
   //跳转司机模式
   toDriverMode: function() {
@@ -78,7 +87,9 @@ Page({
               longitude: res.longitude,
               latitude: res.latitude
             }],
+            //选择目的地后直接拉起订单页面
             showOrderInfo: true,
+            showModal:true,
           });
           wx.hideTabBar();
         }
@@ -91,32 +102,33 @@ Page({
       }
     });
   },
-  //
+  //蒙板点击事件
   preventTouchMove: function() {
 
   },
-  //
+  //寻找司机
   findDriver: function() {
     wx.navigateTo({
       url: "./findDriver/finddriver",
     })
   },
-  //
+  //选择订单日期
   chooseOrderData:function(e){
     this.setData({
       date:e.detail.value,
     })
   },
-  //
+  //选择订单时间
   chooseOrderTime: function (e) {
     this.setData({
       time: e.detail.value,
     })
   },
-  //
+  //取消
   orderCancel:function(){
     this.setData({
-      showOrderInfo:false
+      showOrderInfo:false,
+      showModal:false,
     });
     wx.showTabBar();
   },
@@ -128,6 +140,38 @@ Page({
     var amapFun = new amapFile.AMapWX({
       key: '611cf6eb9289a026c8a745a0b7775503'
     });
+    //
+    if (app.globalData.userInfo) {
+      that.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true,
+        showModal:false,
+      })
+    } else if (that.data.canIUse) {
+      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
+      // 所以此处加入 callback 以防止这种情况
+      app.userInfoReadyCallback = res => {
+        that.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true,
+          showModal: false,
+        })
+      }
+    } else {
+      // 在没有 open-type=getUserInfo 版本的兼容处理
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          that.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true,
+            showModal: false,
+          })
+        }
+      })
+    }
+
+    //
     wx.getLocation({
       type: 'gcj02',
       success: function(res) {

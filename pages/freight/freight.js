@@ -9,12 +9,49 @@ Page({
     showOrderInfo: 0,
     currentTab: 0,
     goodsList: [{
+      id: 1,
       type: "普通货物",
       startPosition: "宜宾",
       endPosition: "成都",
       date: "2019-11-11",
       weight: "5吨",
     }, {
+      id: 2,
+      type: "普通货物",
+      startPosition: "宜宾",
+      endPosition: "成都",
+      date: "2019-11-11",
+      weight: "6吨",
+    }, {
+      id: 3,
+      type: "普通货物",
+      startPosition: "宜宾",
+      endPosition: "成都",
+      date: "2019-11-11",
+      weight: "5吨",
+    }, {
+      id: 4,
+      type: "普通货物",
+      startPosition: "宜宾",
+      endPosition: "成都",
+      date: "2019-11-11",
+      weight: "6吨",
+    }, {
+      id: 5,
+      type: "普通货物",
+      startPosition: "宜宾",
+      endPosition: "成都",
+      date: "2019-11-11",
+      weight: "5吨",
+    }, {
+      id: 6,
+      type: "普通货物",
+      startPosition: "宜宾",
+      endPosition: "成都",
+      date: "2019-11-11",
+      weight: "6吨",
+    }, {
+      id: 7,
       type: "普通货物",
       startPosition: "宜宾",
       endPosition: "成都",
@@ -31,6 +68,61 @@ Page({
       date: "2019-11-11"
     }]
   },
+  reachBottom: function() {
+    var that = this;
+    setTimeout(() => {
+      let oldGoodList = that.data.goodsList;
+      let newGoodsList = [{
+        id: 8,
+        type: "普通货物",
+        startPosition: "宜宾",
+        endPosition: "成都",
+        date: "2019-11-11",
+        weight: "5吨",
+      }, {
+        id: 9,
+        type: "普通货物",
+        startPosition: "宜宾",
+        endPosition: "成都",
+        date: "2019-11-11",
+        weight: "6吨",
+      }, {
+        id: 10,
+        type: "普通货物",
+        startPosition: "宜宾",
+        endPosition: "成都",
+        date: "2019-11-11",
+        weight: "5吨",
+      }, {
+        id: 11,
+        type: "普通货物",
+        startPosition: "宜宾",
+        endPosition: "成都",
+        date: "2019-11-11",
+        weight: "6吨",
+      }, {
+        id: 12,
+        type: "普通货物",
+        startPosition: "宜宾",
+        endPosition: "成都",
+        date: "2019-11-11",
+        weight: "5吨",
+      }, {
+        id: 13,
+        type: "普通货物",
+        startPosition: "宜宾",
+        endPosition: "成都",
+        date: "2019-11-11",
+        weight: "6吨",
+      }];
+      let goodsList = oldGoodList.concat(newGoodsList);
+      that.setData({
+        goodsList: goodsList,
+      })
+
+    }, 1000);
+  },
+  //
   switchTopTab: function(e) {
     var that = this;
     if (this.data.currentTab === e.target.dataset.current) {
@@ -41,6 +133,14 @@ Page({
       })
     }
     console.log(that.data.currentTab);
+  },
+  //
+  changeTopTab: function(e) {
+    var that = this;
+    var current = that.data.currentTab;
+    that.setData({
+      currentTab: current,
+    })
   },
   //
   preventTouchMove: function() {},

@@ -15,10 +15,12 @@
 
 .to-driverMode {
   position: absolute;
-  right: 0;
-  width: 100rpx;
-  height: 100rpx;
-  border-radius: 50rpx;
+  right: 10rpx;
+  top:10rpx;
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  border: 1rpx solid black;
 }
 
 .get-location {
