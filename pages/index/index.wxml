@@ -20,7 +20,12 @@
   </map>
 </view>
 
-<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}">
+  <view wx:if="{{! hasUserInfo}}" style="z-index:4">
+  <view>将会获取您的地理位置等信息</view>
+  <button bindtap="getUserInfo" open-type="getUserInfo">授权登陆</button>
+</view>
+</view>
 <view class="write-order" wx:if="{{showOrderInfo}}">
   <view class="order-item">
     <view class="order-item-title">日期：</view>
@@ -52,7 +57,3 @@
   </view>
 </view>
 
-<view wx:if="{{! hasUserInfo}}" style="z-index:4">
-  <view>将会获取您的地理位置等信息</view>
-  <button bindtap="getUserInfo" open-type="getUserInfo">授权登陆</button>
-</view>

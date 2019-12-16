@@ -16,6 +16,54 @@ Page({
     scale: 16,
     markers: [{}]
   },
+  //选择出发地
+  chooseLocation:function(){
+    var that=this;
+    wx.chooseLocation({
+      success: function(res) {
+        if(res.name!=""){
+          that.setData({
+            location: res.name,
+            markers:[{
+              id: 0,
+              longitude: res.longitude,
+              latitude: res.latitude
+            }]
+          })
+        }
+      },
+      fail: function (info) {
+
+      },
+      complete: function () {
+
+      }
+    })
+  },
+  //选择目的地
+  chooseDestination: function () {
+    var that = this;
+    wx.chooseLocation({
+      success: function (res) {
+        if (res.name != "") {
+          that.setData({
+            destination: res.name,
+            markers: [{
+              id: 1,
+              longitude: res.longitude,
+              latitude: res.latitude
+            }]
+          });
+        }
+      },
+      fail: function (info) {
+
+      },
+      complete: function () {
+
+      }
+    })
+  },
   //定位
   getPosition: function () {
     var that = this;

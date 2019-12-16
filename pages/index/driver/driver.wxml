@@ -25,14 +25,15 @@
   </view>
   <view class="order-item">
     <view class="order-item-title">起点：</view>
-    <view class="order-item-item">{{location}}</view>
+    <view class="order-item-item" bindtap="chooseLocation">{{location}}</view>
   </view>
   <view class="order-item">
     <view class="order-item-title">终点：</view>
-    <view class="order-item-item">{{destination}}</view>
+    <view class="order-item-item" bindtap="chooseDestination">{{destination}}</view>
   </view>
   <view class="order-item">
     <view class="order-item-title">人数：</view>
+    <input class="order-item-input" value="1" type="number"></input>
   </view>
   <view class="order-item">
     <view class="order-cancel" bindtap="orderCancel">取消</view>

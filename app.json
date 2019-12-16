@@ -7,7 +7,12 @@
     "pages/logs/logs",
     "pages/index/driver/driver",
     "pages/index/driver/findPassenger/findpassenger",
-    "pages/index/findDriver/finddriver"
+    "pages/index/findDriver/finddriver",
+    "pages/person/setup/setup",
+    "pages/person/myorder/myorder",
+    "pages/person/security/security",
+    "pages/person/yqdjl/yqdjl",
+    "pages/person/help/help"
   ],
   "window": {
     "backgroundTextStyle": "light",

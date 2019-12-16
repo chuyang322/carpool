@@ -20,25 +20,25 @@
     </view>
   </view>
   <view class="term-list">
-    <view class="term-item">
+    <navigator class="term-item" url="./myorder/myorder">
       <image class="term-item-image" src="/image/person/wddd.png"></image>
       <view class="term-item-text">我的订单</view>
-    </view>
-    <view class="term-item">
+    </navigator>
+    <navigator class="term-item" url="./yqdji/yqdji">
       <image class="term-item-image" src="/image/person/yqdjl.png"></image>
-      <view class="term-item-text">邀请的奖励</view>
-    </view>
-    <view class="term-item">
+      <view class="term-item-text">邀请得奖励</view>
+    </navigator>
+    <navigator class="term-item" url="./security/security">
       <image class="term-item-image" src="/image/person/safe.png"></image>
       <view class="term-item-text">安全中心</view>
-    </view>
-    <view class="term-item">
+    </navigator>
+    <navigator class="term-item" url="./help/help">
       <image class="term-item-image" src="/image/person/help.png"></image>
       <view class="term-item-text">帮助</view>
-    </view>
-    <view class="term-item">
+    </navigator>
+    <navigator class="term-item" url="./setup/setup">
       <image class="term-item-image" src="/image/person/setup.png"></image>
       <view class="term-item-text">设置</view>
-    </view>
+    </navigator>
   </view>
 </view>
